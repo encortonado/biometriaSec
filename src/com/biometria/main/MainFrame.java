@@ -5,6 +5,8 @@
  */
 package com.biometria.main;
 
+import com.biometria.dados.DadosFrame;
+
 /**
  *
  * @author Bortolo
@@ -32,12 +34,18 @@ public class MainFrame extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Base de Dados Ambiental");
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/biometria/resources/Ministério-do-Meio-Ambiente-less.png"))); // NOI18N
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/biometria/resources/Base de dados.png"))); // NOI18N
 
         jButton1.setText("Biometria");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -73,6 +81,12 @@ public class MainFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        DadosFrame dados = new DadosFrame();
+        dados.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
